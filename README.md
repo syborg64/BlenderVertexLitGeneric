@@ -36,4 +36,7 @@ $allowalphatocoverage requires the material's "Blend Mode" setting to be set to 
 ## Notes
 BVLG works with cycles but will yield more realistic results with ray traced reflections instead of phong, all other effects will not be affected.
 
+a lot of the effects still need ajusting, their intensity may not be linear and my version may not be matching how it actually looks in engine, however because of limitations in HLMV and the slowness of repeated testing in game I have yet to have reliable side by side compairaison to refine curves and multipliers
+### Future plans
 I'd like to see this made into an addon and maybe even implemented into blender source tools
+The final goal would be to make this into an exporter that would automatically generate the vmt based on the node setup
