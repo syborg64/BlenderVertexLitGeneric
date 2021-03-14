@@ -33,10 +33,34 @@ certain effects like $nocull are lower level than the shader nodes and are set i
 
 $allowalphatocoverage requires the material's "Blend Mode" setting to be set to alpha hashed for accurate result, tho low sample counts will yield pixelated mess
 
+## VMTgen
+in version 3.0a, VMTgen is a python command to compile a material to VMT.
+
+USAGE:<br/>
+. BVLG.VMTgen(mat, cdmaterials, folder = "export", mode = "name"<br/>
+. mat : the name of the material to be compiled, in quotes<br/>
+. cdmaterials : the location for textures to be found, relative to the /materials/ folder<br/>
+. folder : where to place the compiled VMT<br/>
+. mode : to be ignored
+   
+The node setup must be strictly legal, textures to texture slots and values in empty sockets to where it is needed. A complete set is provided by default to show the protoype legal setup
+
+AutoVMTgen is a command that automatically compiles compliant materials<br/>
+USAGE:<br/>
+. BVLG.AutoVMTgen(cdmaterials, folder = "export")<br/>
+  
+to run these commands, open up a python console in blender and type them in
+
 ## Notes
 BVLG works with cycles but will yield more realistic results with ray traced reflections instead of phong, all other effects will not be affected.
 
 a lot of the effects still need ajusting, their intensity may not be linear and my version may not be matching how it actually looks in engine, however because of limitations in HLMV and the slowness of repeated testing in game I have yet to have reliable side by side compairaison to refine curves and multipliers
 ### Future plans
 I'd like to see this made into an addon and maybe even implemented into blender source tools
-The final goal would be to make this into an exporter that would automatically generate the vmt based on the node setup
+VMTgen needs a GUI, but I'm not qualified for that (yet)
+Ultimately, BVLG should be able to autobake all the textures to tga then use the official tool to convert to vtf, skipping VTFedit or GIMP for texture conversion
+that however is a bit down the line
+
+### PLEASE
+I need some feedback. I made this thing alone and I'm sure I've missed a ton of things. if you look at it, please do tell me if it could be improved and if you've changed anything about it.
+this version is free and will remain free, but I am considering making the next ones a dollar or two.
