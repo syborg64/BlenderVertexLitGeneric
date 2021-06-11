@@ -56,11 +56,10 @@ BVLG works with cycles but will yield more realistic results with ray traced ref
 
 a lot of the effects still need ajusting, their intensity may not be linear and my version may not be matching how it actually looks in engine, however because of limitations in HLMV and the slowness of repeated testing in game I have yet to have reliable side by side compairaison to refine curves and multipliers
 ### Future plans
-I'd like to see this made into an addon and maybe even implemented into blender source tools
-VMTgen needs a GUI, but I'm not qualified for that (yet)
+We're currently working through a merging into SourceIO, that will allow us to reach many of the goals I am not qualified to do myself:
+The import side is critically lacking, with no auto importer and knowledge of the engine and the node required to make full use of it
 Ultimately, BVLG should be able to autobake all the textures to tga then use the official tool to convert to vtf, skipping VTFedit or GIMP for texture conversion
-that however is a bit down the line
 
 ### PLEASE
 I need some feedback. I made this thing alone and I'm sure I've missed a ton of things. if you look at it, please do tell me if it could be improved and if you've changed anything about it.
-this version is free and will remain free, but I am considering making the next ones a dollar or two.
+this version is free and will remain free
